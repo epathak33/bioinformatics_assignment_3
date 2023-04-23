@@ -1,0 +1,19 @@
+1) sed "/Zoo/d" pandas.txt >> no_zoo_pandas.txt 
+
+2) grep pandas.txt | sort -k2 pandas.txt | awk '{print $1,$4,$2}' >> pandas_name_age_sex.txt
+
+3) awk '{print $5}' pandas.txt | sort >> output_question_3
+
+4) sed 's/female/F/' pandas.txt |sed 's/male/M/' >> output_F_M_New_pandas.txt 
+
+5) grep October pandas.txt|grep female -c 
+
+6) grep -n -v "Enish" pandas.txt >> number_6_ans_pandas.txt 
+
+7) sed -n -e 1p -e 6p -e 17p pandas.txt >> number_7_ans_pandas.txt (help from https://linuxcommando.blogspot.com/2008/03/using-sed-to-extract-lines-in-text-file.html)
+
+8) grep -i x pandas.txt >> lines_x_pandas.txt 
+
+9) awk '{print $5}' pandas.txt | sort | uniq -i -u >> unique_location_pandas.txt (uniq command will only identify duplicates that are adjacent, or next to each other, in the file)
+
+10) awk '$4 <=10 {print}' pandas.txt | awk '{print $1,$4}' | sort -nk2 >> youngerthanten_pandas.txt (Use the -k option to sort on a certain column. For example, use “-k 2” to sort on the second column. Help taken from https://www.geeksforgeeks.org/sort-command-linuxunix-examples/ )
